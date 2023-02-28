@@ -3,14 +3,16 @@ on: [push]
 #Specify the event that automatically triggers the workflow file. This example uses the push event, so that the jobs run every time someone pushes a change to the repository
 jobs: # gather all the jobs that run in the workflow
   my-helloworld-jobs:
-  runs-on: ubuntu-latest #set the type of machine to run on
-  steps:
-    - uses: actions/checkout@v2 #Step 1: checks out a copy of your repository on the ubuntu-latest machine
-    
-    - name: say hello world #Step 2: type the word "Hello world"
-      run: echo 'Hello World'
+    runs-on: ubuntu-latest #set the type of machine to run on
+    steps:
+      - uses: actions/checkout@v2 #Step 1: checks out a copy of your repository on the ubuntu-latest machine
+      
+      - name: say hello world #Step 2: type the word "Hello world"
+        run: echo 'Hello World'
 
-    - name: view a file #Step 3: Two sub-steps involved
-      run: |
-        echo "Viewing the file: "
-        cat requirements.txt
+      - name: view a file #Step 3: Two sub-steps involved
+        run: |
+          echo "Viewing the file: "
+          cat requirements.txt
+
+# changed
