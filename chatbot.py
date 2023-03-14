@@ -13,11 +13,11 @@ def main():
 # Load your token and create an Updater for your Bot
     # config = configparser.ConfigParser()
     # config.read('telbotassignment.ini')
-    updater = Updater(token=(os.environ['ACCESS_TOKEN']) use_context=True)
+    updater = Updater(token=(os.environ['ACCESS_TOKEN']),use_context=True)
     dispatcher = updater.dispatcher
 
     global redis1
-    redis1 = redis.Redis(host=(os.environ['ACCESS_TOKEN']), password=(os.environ['ACCESS_TOKEN']) port=(os.environ['ACCESS_TOKEN']))
+    redis1 = redis.Redis(host=(os.environ['ACCESS_TOKEN']), password=(os.environ['ACCESS_TOKEN']), port=(os.environ['ACCESS_TOKEN']))
     # You can set this logging module, so you will know when and why things do not work as e
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
     # register a dispatcher to handle message: here we register an echo dispatcher
