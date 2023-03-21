@@ -1,1 +1,1 @@
-python: python lab4.py
+python: python chatbot.py
